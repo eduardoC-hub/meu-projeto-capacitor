@@ -57,11 +57,85 @@
 </main>
 
 <style>
-    * {
-        box-sizing: border-box;
-    }
+  * {
+    box-sizing: border-box;
+}
 
-    .styled-button {
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100vh;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.input-field, .select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    width: 150px;
+    text-align: center;
+}
+
+.select {
+    width: 160px;
+}
+
+.input-field:focus, .select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.invert-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.invert-btn:hover {
+    background-color: #0056b3;
+}
+
+.styled-button {
     width: 250px;
     max-width: 100%;
     padding: 16px;
@@ -74,83 +148,43 @@
     box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
     cursor: pointer;
     transition: transform 0.2s, background-color 0.3s ease;
-  }
-  
-  /* Efeito de hover nos botões */
-  .styled-button:hover {
+}
+
+.styled-button:hover {
     background-color: #0056b3;
     transform: translateY(-3px);
-  }
+}
 
-    main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-    }
-
+/* RESPONSIVO PARA CELULARES */
+@media (max-width: 480px) {
     .container {
-        background-color: #fff;
-        padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        max-width: 600px;
-        text-align: center;
+        padding: 20px;
     }
 
     h1 {
-        font-size: 28px;
-        color: #333;
-        margin-bottom: 20px;
-    }
-
-    .input-group {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
+        font-size: 22px;
     }
 
     .input-box {
-        display: flex;
-        align-items: center;
+        flex-direction: column;
         gap: 10px;
     }
 
-    .input-field, .select {
-        padding: 10px;
-        font-size: 16px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        outline: none;
-        width: 150px;
-        text-align: center;
-    }
-
+    .input-field,
     .select {
-        width: 160px;
-    }
-
-    .input-field:focus, .select:focus {
-        border-color: #007bff;
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        width: 100%;
+        font-size: 16px;
     }
 
     .invert-btn {
-        background-color: #007bff;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        font-size: 20px;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: background-color 0.3s;
+        padding: 10px;
+        font-size: 18px;
     }
 
-    .invert-btn:hover {
-        background-color: #0056b3;
+    .styled-button {
+        font-size: 16px;
+        padding: 14px;
     }
+}
 
-   
 </style>

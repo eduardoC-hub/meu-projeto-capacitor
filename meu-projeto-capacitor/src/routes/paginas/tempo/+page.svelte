@@ -53,12 +53,7 @@
 </main>
 
 <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-    }
+  
     .styled-button {
     width: 250px;
     max-width: 100%;
@@ -84,12 +79,12 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background-color: #f4f4f4;
+        
     }
 
     .container {
         text-align: center;
-        background-color: #ffffff;
+        ;
         border-radius: 8px;
         padding: 30px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -118,12 +113,12 @@
     }
 
     .input-field:focus, .select-field:focus {
-        border-color: #007bff;
+        border-color: #d97ef2;
         box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
     }
 
     .convert-btn {
-        background-color: #007bff;
+        background-color: #910acb;
         color: white;
         border: none;
         padding: 15px;
@@ -135,7 +130,7 @@
     }
 
     .convert-btn:hover {
-        background-color: #0056b3;
+        background-color: #ba6fec;
     }
 
     .resultado {

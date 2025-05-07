@@ -48,68 +48,57 @@
         }
     }
 </script>
-
 <style>
-    .container {
-        margin-top: 150px;
-        align-items: center;
-        background-color: #fff;
-        border-radius: 12px;
-        padding: 30px;
-        width: 350px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    }
+ /* Estilo base (desktop e tablets) */
+.container {
+    margin: 150px auto 30px auto;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 350px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
-    .input-field {
-        background-color: #e0ffad;
-        color: #fff;
-        padding: 12px;
-        border: none;
-        border-radius: 6px;
-        text-decoration: none;
-        text-align: center;
-        display: block;
-        width: 100%;
-        margin-bottom: 20px;
-        font-size: 18px;
-        cursor: pointer;
-    }
+.input-field, .select-field {
+    background-color: #a6a6a6;
+    color: #000000;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
 
-    .select-field {
-        background-color: #e0ffad;
-    }
+.select-field {
+    border: 2px solid #ccc;
+}
 
-    .select-field {
-        width: 100%;
-        padding: 12px;
-        margin: 10px 0;
-        border: 2px solid #ccc;
-        border-radius: 6px;
-        font-size: 16px;
-        background-color: #e0ffad;
-    }
+.input-field:focus,
+.select-field:focus {
+    border-color: #000000;
+    outline: none;
+}
 
-    .input-field,
-    .select-field:focus {
-        border-color: #4CAF50;
-        outline: none;
-    }
+.result {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
 
-    .result {
-        font-size: 20px;
-        font-weight: bold;
-        color: #333;
-        margin-top: 20px;
-    }
+b {
+    font-weight: 600;
+    font-size: 18px;
+}
 
-    b {
-        font-weight: 600;
-        font-size: 18px;
-    }
-    .styled-button {
-    width: 250px;
-    max-width: 100%;
+.styled-button {
+    width: 100%;
     padding: 16px;
     margin: 12px 0;
     font-size: 18px;
@@ -120,13 +109,40 @@
     box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
     cursor: pointer;
     transition: transform 0.2s, background-color 0.3s ease;
-  }
-  
-  /* Efeito de hover nos botões */
-  .styled-button:hover {
+}
+
+.styled-button:hover {
     background-color: #0056b3;
     transform: translateY(-3px);
-  }
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        margin-top: 60px;
+        padding: 20px;
+    }
+
+    b {
+        font-size: 16px;
+    }
+
+    .result {
+        font-size: 18px;
+    }
+
+    .input-field, .select-field {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .styled-button {
+        font-size: 16px;
+        padding: 14px;
+    }
+}
+
 </style>
 <center>
 <div class="container">

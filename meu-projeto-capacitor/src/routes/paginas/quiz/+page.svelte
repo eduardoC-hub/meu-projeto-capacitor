@@ -1,4 +1,5 @@
 <script>
+  
     let promise = $state();
     let questionario = $state([]);
     let respostas = $state([]);
@@ -27,15 +28,15 @@
         }
         alert(`Você acertou ${acertos} de ${questionario.length} questões!`);
     }
-  </script>
-   
-  <div class="container">
+</script>
+
+<div class="container">
     <button class="btn btn-info" onclick={gerarNovoQuiz}>Gerar novo quiz</button>
    
     {#await promise}
         <p>Gerando novo questionário...</p>
     {:then}
-        <ol>
+        <ol class="quiz-list">
             {#each questionario as pergunta, i}
                 <h4><li>{@html pergunta.question}</li></h4>
                 {#each pergunta.incorrect_answers as alternativa}
@@ -54,8 +55,73 @@
                 {/each}
             {/each}
         </ol>
-        <button onclick={verificarRespostas} class="btn btn-success">Confirmar!</button>
+        <button onclick={verificarRespostas} class="btn btn-success btn-block">Confirmar!</button>
     {:catch error}
         <p style="color: red">{error.message}</p>
     {/await}
-  </div>
+</div>
+
+<style>
+    /* Estilos gerais */
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .quiz-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    h4 {
+        font-size: 1.2em;
+    }
+
+    .form-check {
+        margin-bottom: 10px;
+    }
+
+    .form-check-label {
+        font-size: 1em;
+    }
+
+    .btn-block {
+        width: 100%;
+    }
+
+    /* Estilos responsivos */
+    @media (max-width: 768px) {
+        h4 {
+            font-size: 1em;
+        }
+
+        .btn {
+            font-size: 1em;
+            padding: 12px;
+        }
+
+        .form-check {
+            font-size: 1em;
+        }
+    }
+
+    /* Para telas muito pequenas, como smartphones */
+    @media (max-width: 480px) {
+        .container {
+            padding: 10px;
+        }
+
+        .btn {
+            font-size: 1.2em;
+            padding: 15px;
+        }
+
+        h4 {
+            font-size: 1em;
+        }
+
+        .form-check-input {
+            margin-right: 10px;
+        }
+    }
+</style>

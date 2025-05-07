@@ -1,7 +1,11 @@
+
 <script>
   let email = '';
   let password = '';
   let errorMessage = '';
+
+  // Variável reativa para o estado do botão
+  $: botaoDesabilitado = !email || !password;
 
   function validateForm() {
     if (!email || !password) {
@@ -20,15 +24,14 @@
 
   function handleSubmit(event) {
     event.preventDefault();
-
     if (validateForm()) {
       console.log('E-mail:', email);
       console.log('Senha:', password);
-
       window.location.href = '/paginas/app';
     }
   }
 </script>
+
 
 <!-- Viewport tag ESSENCIAL para responsividade em celulares -->
 <svelte:head>
@@ -56,12 +59,12 @@
       <input type="password" id="password" bind:value={password} placeholder="Digite sua senha" />
 
       <button
-        type="submit"
-        class="btn btn-primary mt-3"
-        disabled={!email || !password || errorMessage}
-      >
-        Entrar
-      </button>
+  type="submit"
+  class="btn btn-primary mt-3"
+  disabled={botaoDesabilitado}>
+  Entrar
+</button>
+
     </form>
   </div>
 </div>
@@ -128,8 +131,6 @@
     background-color: #a0a0a079;
     cursor: not-allowed;
   }
-
-  
   @media (max-width: 576px) {
     h2 {
       font-size: 1.25rem;
