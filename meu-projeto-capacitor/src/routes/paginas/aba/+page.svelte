@@ -1,46 +1,38 @@
+
 <div class="button-container">
-  
-  <a href="http://localhost:5173/area">
+
+  <a href="/paginas/area">
       <button class="styled-button">converter area</button>
     </a>
-    <a href="http://localhost:5173/temperatura">
+    <a href="/paginas/temperatura">
       <button class="styled-button">Converter Temperatura</button>
     </a>
-    <a href="http://localhost:5173/massa">
+    <a href="/paginas/massa">
       <button class="styled-button">Converter Massa</button>
     </a>
-    <a href="http://localhost:5173/tempo">
+    <a href="/paginas/tempo">
       <button class="styled-button">Converter Tempo</button>
     </a>
-    <a href="http://localhost:5173/distancia">
+    <a href="/paginas/distancia">
       <button class="styled-button">Converter Distância</button>
     </a>
-    <a href="http://localhost:5173/cotac">
+    <a href="/paginas/cotac">
       <button class="styled-button">Converter moedas</button>
     </a>
   </div>
 
   <style>
-  /* Estilos gerais */
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Container para os botões */
   .button-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 750px;
     padding: 20px;
     box-sizing: border-box;
   }
   
-  /* Estilo dos botões */
+  
   .styled-button {
     width: 250px;
     max-width: 100%;
@@ -56,13 +48,13 @@
     transition: transform 0.2s, background-color 0.3s ease;
   }
   
-  /* Efeito de hover nos botões */
+
   .styled-button:hover {
     background-color: #0056b3;
     transform: translateY(-3px);
   }
   
-  /* Responsividade para dispositivos móveis */
+ 
   @media (max-width: 600px) {
     .styled-button {
       font-size: 16px;

@@ -49,7 +49,7 @@
             </div>
         </div>
         <br>
-        <a href="http://localhost:5173/aba">
+        <a href="/paginas/aba">
             <button class="styled-button">voltar</button>
           </a>
     </div>
@@ -152,11 +152,5 @@
         background-color: #0056b3;
     }
 
-    hr {
-        margin-top: 20px;
-        border: 0;
-        border-top: 1px solid #ddd;
-        width: 80%;
-        margin-left: 10%;
-    }
+   
 </style>

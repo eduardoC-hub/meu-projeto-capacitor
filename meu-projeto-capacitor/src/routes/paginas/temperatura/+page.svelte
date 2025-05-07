@@ -41,7 +41,7 @@
             <label for="kelvin">Kelvin:</label>
             <input type="number" id="kelvin" bind:value={kelvin} oninput={Kelvin} class="input-field" />
         </div>
-        <a href="http://localhost:5173/aba">
+        <a href="/paginas/aba">
             <button class="styled-button">voltar</button>
           </a>
     </div>

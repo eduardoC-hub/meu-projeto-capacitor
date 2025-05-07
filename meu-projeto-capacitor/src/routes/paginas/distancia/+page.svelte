@@ -50,7 +50,7 @@
                 <input type="number" bind:value={km} on:input={quilometros} id="km" class="input-field" placeholder="Digite em quilômetros">
             </div>
         </div>
-        <a href="http://localhost:5173/aba">
+        <a href="/paginas/aba">
             <button class="styled-button">voltar</button>
           </a>
     </div>

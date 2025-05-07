@@ -45,7 +45,7 @@
         {/if}
         <br>
         <br>
-        <a href="http://localhost:5173/aba">
+        <a href="/paginas/aba">
             <button class="styled-button">voltar</button>
           </a>
     </div>

@@ -90,7 +90,7 @@
         background-color: #e0ffad;
     }
 
-    .input-field:focus,
+    .input-field,
     .select-field:focus {
         border-color: #4CAF50;
         outline: none;
@@ -128,7 +128,7 @@
     transform: translateY(-3px);
   }
 </style>
-
+<center>
 <div class="container">
     <b>Conversor de áreas</b>
     <br>
@@ -153,7 +153,8 @@
     
     <p class="result">O resultado é {resultado}</p>
     <br>
-    <a href="http://localhost:5173/aba">
+    <a href="/paginas/aba">
         <button class="styled-button">voltar</button>
       </a>
 </div>
+</center>
