@@ -7,7 +7,8 @@
     { label: 'Gerador de Senhas', href: '/paginas/aleatorio' },
     { label: 'Autenticação', href: '/paginas/aut' },
     { label: 'Boletim', href: '/paginas/boletim' },
-    { label: 'Quiz', href: '/paginas/quiz' }
+    { label: 'Quiz', href: '/paginas/quiz' },
+    { label: 'Calculadora', href: '/paginas/calculadora' }
   ];
 
   // Filtro com base no termo pesquisado
@@ -56,12 +57,14 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li class="nav-item"><a class="nav-link active" href="/paginas/calculadora">Calculadora</a></li>
         <li class="nav-item"><a class="nav-link active" href="/paginas/aba">Conversor</a></li>
         <li class="nav-item"><a class="nav-link active" href="/paginas/listasimples">Lista de Tarefas</a></li>
         <li class="nav-item"><a class="nav-link active" href="/paginas/aleatorio">Gerador de Senhas</a></li>
         <li class="nav-item"><a class="nav-link active" href="/paginas/aut">Autenticação</a></li>
         <li class="nav-item"><a class="nav-link active" href="/paginas/boletim">Boletim</a></li>
         <li class="nav-item"><a class="nav-link active" href="/paginas/quiz">Quiz</a></li>
+        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown">Dropdown</a>
           <ul class="dropdown-menu">
