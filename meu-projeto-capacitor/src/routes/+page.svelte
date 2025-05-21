@@ -58,12 +58,7 @@
       <label for="password">Senha</label>
       <input type="password" id="password" bind:value={password} placeholder="Digite sua senha" />
 
-      <button
-  type="submit"
-  class="btn btn-primary mt-3"
-  disabled={botaoDesabilitado}>
-  Entrar
-</button>
+      <button type="submit" class="btn btn-primary mt-3" disabled={botaoDesabilitado}> Entrar </button>
 
     </form>
   </div>

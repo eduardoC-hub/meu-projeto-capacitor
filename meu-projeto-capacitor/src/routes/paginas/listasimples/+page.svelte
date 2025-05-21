@@ -30,6 +30,10 @@
 	}
 
 	function confirmarEdicao() {
+		if (!conteudoTarefaEditando) {
+			mensagemToast.show();
+			return;
+		}
 		if (tarefaEditando && conteudoTarefaEditando.trim()) {
 			tarefaEditando.conteudo = conteudoTarefaEditando.trim();
 			tarefaEditando = undefined;
