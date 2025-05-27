@@ -1,10 +1,10 @@
-
 <script>
+  import { goto } from '$app/navigation';
+
   let email = '';
   let password = '';
   let errorMessage = '';
 
-  // Variável reativa para o estado do botão
   $: botaoDesabilitado = !email || !password;
 
   function validateForm() {
@@ -27,13 +27,13 @@
     if (validateForm()) {
       console.log('E-mail:', email);
       console.log('Senha:', password);
-      window.location.href = '/paginas/app';
+      goto('/paginas/app'); 
     }
   }
 </script>
 
 
-<!-- Viewport tag ESSENCIAL para responsividade em celulares -->
+
 <svelte:head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 </svelte:head>
