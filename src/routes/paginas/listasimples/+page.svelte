@@ -18,6 +18,8 @@
 	let tarefaEditando = $state();
 	let tarefaExcluindo;
 	let mensagemToast;
+	let exibir = $state('2');
+	let busca = $state('');
 
 	async function adicionarTarefa() {
 		novaTarefa = novaTarefa.trim();
@@ -60,8 +62,23 @@
 
 	function alterarStatus(tarefa, status) {
 		tarefa.status = status;
+
+	}
+	function alltasksdone() {
+		tarefas.forEach((tarefa) => {
+			tarefa.status = 1;
+		});
 	}
 
+	function alltasksundone() {
+		tarefas.forEach((tarefa) => {
+			tarefa.status = 0;
+		});
+	}
+    function buscarTarefas() {
+		return tarefas.filter(tarefa => tarefa.conteudo.toLowerCase().includes(busca.toLowerCase()));
+	}
+	
 	onMount(() => {
 		mensagemToast = new bootstrap.Toast('#mensagemToast');
 	});
@@ -75,23 +92,52 @@
 			<i class="bi bi-plus-lg"></i>
 		</button>
 	</form>
-
+</div>
 	<Toast msg={'Digite algo!'} />
-
 	
-	<div class="container-fluid px-4 pt-2">
-		<div class="d-flex gap-3">
-			<span class="badge bg-secondary">Total: {totalTarefas}</span>
-			<span class="badge bg-warning text-dark">Pendentes: {totalPendentes}</span>
-			<span class="badge bg-success">Concluídas: {totalConcluidas}</span>
+<div class="container-fluid mt-5 pt-4">
+		<input class="form-control form-control-lg" placeholder="Busca" bind:value={busca}/>
+		
+		<div class="container-fluid px-4 pt-2">
+			<div class="d-flex gap-3">
+				<span class="badge bg-secondary">Total: {totalTarefas}</span>
+				<span class="badge bg-warning text-dark">Pendentes: {totalPendentes}</span>
+				<span class="badge bg-success">Concluídas: {totalConcluidas}</span>
+			</div>
 		</div>
-	</div>
+		<br>
+		<div class="dropdown">
+			<button
+				class="btn btn-primary"
+				type="button"
+				data-bs-toggle="dropdown"
+				aria-expanded="false"
+				style="width: 100%;">
+				Ações
+			</button>
+			<ul class="dropdown-menu" style="width: 100%; text-align: center">
+				Quais tarefas exibir?
+				<select name="exibir" id="pet-select" bind:value={exibir}>
+					<option value="0">Pendentes</option>
+					<option value="1">Concluídas</option>
+					<option value="2">Todas</option>
+				</select>
+
+				<button class="badge bg-success" type="button" onclick={alltasksdone} style="border-radius: 10px;">Marcar as tarefas como concluidas</button>
+				<button class="badge bg-warning text-dark" type="button" onclick={alltasksundone} style="border-radius: 10px;">Marcar as tarefas como pendentes</button>
+				<br />
+				</ul>
+				</div>
+	
+	
 </div>
 <br>
 <br>
 <div class="container-fluid mt-5 pt-3">
+	
+	{#if exibir == '0'}
 	<ToDoList
-		tarefas={tarefasPendentes}
+		tarefas={buscarTarefas().filter(tarefa => tarefa.status == 0)}
 		{tarefaEditando}
 		bind:conteudoTarefaEditando
 		{editarTarefa}
@@ -100,9 +146,9 @@
 		{alterarStatus}
 		{excluirTarefa}
 	/>
-	<hr />
+{:else if exibir == '1'}
 	<ToDoList
-		tarefas={tarefasConcluidas}
+		tarefas={buscarTarefas().filter(tarefa => tarefa.status == 1)}
 		{tarefaEditando}
 		bind:conteudoTarefaEditando
 		{editarTarefa}
@@ -111,6 +157,18 @@
 		{alterarStatus}
 		{excluirTarefa}
 	/>
+{:else if exibir == '2'}
+	<ToDoList
+		tarefas={buscarTarefas()}
+		{tarefaEditando}
+		bind:conteudoTarefaEditando
+		{editarTarefa}
+		{confirmarEdicao}
+		{cancelarEdicao}
+		{alterarStatus}
+		{excluirTarefa}
+	/>
+{/if}
 </div>
 
 <!-- Modal de confirmação -->
