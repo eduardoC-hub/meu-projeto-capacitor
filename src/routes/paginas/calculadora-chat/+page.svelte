@@ -108,28 +108,28 @@
 <div class="calculator">
 	<div class="screen">{display}</div>
 	<div class="buttons">
-		<button class="function" on:click={() => press('C')}>C</button>
-		<button class="function" on:click={() => press('±')}>±</button>
-		<button class="function" on:click={() => press('%')}>%</button>
-		<button class="operator" on:click={() => press('/')}>÷</button>
+		<button class="function" onclick={() => press('C')}>C</button>
+		<button class="function" onclick={() => press('±')}>±</button>
+		<button class="function" onclick={() => press('%')}>%</button>
+		<button class="operator" onclick={() => press('/')}>÷</button>
 
-		<button on:click={() => press('7')}>7</button>
-		<button on:click={() => press('8')}>8</button>
-		<button on:click={() => press('9')}>9</button>
-		<button class="operator" on:click={() => press('*')}>×</button>
+		<button onclick={() => press('7')}>7</button>
+		<button onclick={() => press('8')}>8</button>
+		<button onclick={() => press('9')}>9</button>
+		<button class="operator" onclick={() => press('*')}>×</button>
 
-		<button on:click={() => press('4')}>4</button>
-		<button on:click={() => press('5')}>5</button>
-		<button on:click={() => press('6')}>6</button>
-		<button class="operator" on:click={() => press('-')}>−</button>
+		<button onclick={() => press('4')}>4</button>
+		<button onclick={() => press('5')}>5</button>
+		<button onclick={() => press('6')}>6</button>
+		<button class="operator" onclick={() => press('-')}>−</button>
 
-		<button on:click={() => press('1')}>1</button>
-		<button on:click={() => press('2')}>2</button>
-		<button on:click={() => press('3')}>3</button>
-		<button class="operator" on:click={() => press('+')}>+</button>
+		<button onclick={() => press('1')}>1</button>
+		<button onclick={() => press('2')}>2</button>
+		<button onclick={() => press('3')}>3</button>
+		<button class="operator" onclick={() => press('+')}>+</button>
 
-		<button class="zero" on:click={() => press('0')}>0</button>
-		<button on:click={() => press('.')}>.</button>
-		<button class="operator" on:click={() => press('=')}>=</button>
+		<button class="zero" onclick={() => press('0')}>0</button>
+		<button onclick={() => press('.')}>.</button>
+		<button class="operator" onclick={() => press('=')}>=</button>
 	</div>
 </div>
