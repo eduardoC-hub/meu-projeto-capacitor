@@ -1,14 +1,53 @@
 <script>
-    let display= $state('');
-function press(c){
-    display+=c;
+let display = '';
+ function backspace() {
+    display = display.slice(0, -1);
+ }
+function press(c) {
+    display += c;
+}
 
+function calc() {
+        display = eval(display);
+   
 }
-function calc(){
-display = eval(display);
+
+function clear() {
+    display = '';
 }
-function clear(){
-     display=("")
+
+function invertSignal() {
+    
+        display = eval(display) * -1;
+   
+}
+
+function square() {
+    
+        const val = eval(display);
+        display = val * val;
+   
+}
+
+function sqrt() {
+    
+        const val = eval(display);
+        display = Math.sqrt(val);
+    
+}
+
+function round() {
+    
+        const val = eval(display);
+        display = Math.round(val);
+    
+}
+
+function log10() {
+    
+        const val = eval(display);
+        display = Math.log10(val);
+    
 }
 
 </script>
@@ -22,18 +61,24 @@ function clear(){
             <td><button class="btn btn-outline-dark w-100" onclick={() => press('(')}>&lpar;</button></td>
             <td><button class="btn btn-outline-dark w-100" onclick={() => press(')')}>&rpar;</button></td>
             <td><button class="btn btn-outline-dark w-100" onclick={() => press('/')}>/</button></td>
+            <td><button class="btn btn-outline-danger w-100" onclick={() => backspace('')}>⌫</button></td>
+            <td><button class="btn btn-outline-dark w-100" onclick={round}>arr</button></td>
         </tr>
         <tr>
             <td><button class="btn btn-outline-primary w-100" onclick={() => press('7')}>7</button></td>
             <td><button class="btn btn-outline-primary w-100" onclick={() => press('8')}>8</button></td>
             <td><button class="btn btn-outline-primary w-100" onclick={() => press('9')}>9</button></td>
             <td><button class="btn btn-outline-dark w-100" onclick={() => press('*')}>x</button></td>
+            <td><button class="btn btn-outline-dark w-100" onclick={sqrt}>√</button></td>
+            <td><button class="btn btn-outline-dark w-100" onclick={square}>x²</button></td>
         </tr>
         <tr>
             <td><button class="btn btn-outline-primary w-100" onclick={() => press('4')}>4</button></td>
             <td><button class="btn btn-outline-primary w-100" onclick={() => press('5')}>5</button></td>
             <td><button class="btn btn-outline-primary w-100" onclick={() => press('6')}>6</button></td>
             <td><button class="btn btn-outline-dark w-100" onclick={() => press('-')}>-</button></td>
+            <td><button class="btn btn-outline-dark w-100" onclick={() => press('%')}>%</button></td>
+            <td><button class="btn btn-outline-dark w-100" onclick={square}>""</button></td>
         </tr>
         <tr>
             <td><button class="btn btn-outline-primary w-100" onclick={() => press('1')}>1</button></td>
@@ -41,11 +86,15 @@ function clear(){
             <td><button class="btn btn-outline-primary w-100" onclick={() => press('3')}>3</button></td>
             <td rowspan="2" style="height: 0;">
             <button class="btn btn-outline-dark w-100 h-100" onclick={() => press('+')}>+</button></td>
+            <td><button class="btn btn-outline-dark w-100" onclick={invertSignal}>+/-</button></td>
+            <td><button class="btn btn-outline-dark w-100" onclick={square}>""</button></td>
         </tr>
         <tr>
             <td><button  class="btn btn-outline-primary w-100" onclick={() => press('0')}>0</button></td>
             <td><button  class="btn btn-outline-dark w-100" onclick={() => press('.')}>.</button></td>
-            <td><button  class="btn btn-outline-dark w-100" onclick={() => calc('=')}>=</button></td>            
+            <td><button class="btn btn-outline-dark w-100" onclick={() => calc('=')}>=</button></td>
+            <td><button  class="btn btn-outline-dark w-100" onclick={log10}>log10</button></td>   
+            <td><button class="btn btn-outline-dark w-100" onclick={square}>""</button></td>         
             
         </tr>
     </tbody>
