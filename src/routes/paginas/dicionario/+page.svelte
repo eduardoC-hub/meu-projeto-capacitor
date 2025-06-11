@@ -20,7 +20,7 @@
     <ol>
     {#each filtradas as termo}
     
-       <li><a href="/dicionario/{termo.palavra}">{termo?.palavra}</a></li>
+       <li><a href="/paginas/dicionario/{termo.palavra}">{termo?.palavra}</a></li>
     
     {/each}
 </ol>
