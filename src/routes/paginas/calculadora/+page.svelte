@@ -78,7 +78,7 @@ function log10() {
             <td><button class="btn btn-outline-primary w-100" onclick={() => press('6')}>6</button></td>
             <td><button class="btn btn-outline-dark w-100" onclick={() => press('-')}>-</button></td>
             <td><button class="btn btn-outline-dark w-100" onclick={() => press('%')}>%</button></td>
-            <td><button class="btn btn-outline-dark w-100" onclick={square}>""</button></td>
+            <td><button class="btn btn-outline-dark w-100" onclick={square}>cos</button></td>
         </tr>
         <tr>
             <td><button class="btn btn-outline-primary w-100" onclick={() => press('1')}>1</button></td>
@@ -87,16 +87,57 @@ function log10() {
             <td rowspan="2" style="height: 0;">
             <button class="btn btn-outline-dark w-100 h-100" onclick={() => press('+')}>+</button></td>
             <td><button class="btn btn-outline-dark w-100" onclick={invertSignal}>+/-</button></td>
-            <td><button class="btn btn-outline-dark w-100" onclick={square}>""</button></td>
+            <td><button class="btn btn-outline-dark w-100" onclick={''}>sen</button></td>
         </tr>
         <tr>
             <td><button  class="btn btn-outline-primary w-100" onclick={() => press('0')}>0</button></td>
             <td><button  class="btn btn-outline-dark w-100" onclick={() => press('.')}>.</button></td>
             <td><button class="btn btn-outline-dark w-100" onclick={() => calc('=')}>=</button></td>
             <td><button  class="btn btn-outline-dark w-100" onclick={log10}>log10</button></td>   
-            <td><button class="btn btn-outline-dark w-100" onclick={square}>""</button></td>         
+            <td><button class="btn btn-outline-dark w-100" onclick={''}>tan</button></td>         
             
         </tr>
     </tbody>
 </table>
 </div>
+
+<style>
+   
+
+    .text-center {
+        
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 400px;
+        margin: auto;
+        margin-top: 50px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .form-control-lg {
+        background-color: #000;
+        color: rgb(146, 179, 237);
+        border: none;
+        text-align: right;
+        font-size: 2rem;
+    }
+
+    
+
+    
+
+    .btn-outline-primary:hover,
+    .btn-outline-dark:hover,
+    .btn-outline-danger:hover {
+        
+        color: #ffffff;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    button {
+        min-height: 50px;
+    }
+</style>

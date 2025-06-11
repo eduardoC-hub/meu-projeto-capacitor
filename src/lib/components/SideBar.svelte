@@ -8,7 +8,9 @@
     { label: 'Autenticação', href: '/paginas/aut' },
     { label: 'Boletim', href: '/paginas/boletim' },
     { label: 'Quiz', href: '/paginas/quiz' },
-    { label: 'Calculadora', href: '/paginas/calculadora' }
+    { label: 'Calculadora', href: '/paginas/calculadora' },
+    { label: 'Dicionario', href: '/paginas/dicionario' }
+
   ];
 
   // Filtro com base no termo pesquisado
@@ -64,6 +66,8 @@
         <li class="nav-item"><a class="nav-link active" href="/paginas/aut">Autenticação</a></li>
         <li class="nav-item"><a class="nav-link active" href="/paginas/boletim">Boletim</a></li>
         <li class="nav-item"><a class="nav-link active" href="/paginas/quiz">Quiz</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/paginas/dicionario">Dicionário</a></li>
+
         
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown">Dropdown</a>
