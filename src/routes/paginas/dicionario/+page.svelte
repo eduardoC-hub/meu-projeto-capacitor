@@ -1,7 +1,12 @@
 <script>
-    import{dicionario} from '$lib/dicionario.js';
-    let palavra = '';
-    let filtradas=$state(dicionario)
+    import { dicionario } from '$lib/dicionario.js';
+    import { goto } from '$app/navigation';
+  let palavra = '';
+    let letraSelecionada = '';
+    let filtradas = dicionario;
+  
+    const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  
     function buscar() {
         if ((palavra =='')) {
             filtradas = dicionario;
@@ -13,15 +18,42 @@
                 filtradas.push(termo);
             }
         }
+        }
+    function filtrarPorLetra(letra) {
+      letraSelecionada = letra;
+      if (letra === '') {
+        filtradas = dicionario;
+      } else {
+        filtradas = dicionario.filter(termo => termo.palavra.toUpperCase().startsWith(letra));
+      }
     }
-</script>
-<div><input placeholder="digite uma palavra" oninput ={buscar} bind:value={palavra}></div>
-<div>
-    <ol>
-    {#each filtradas as termo}
-    
-       <li><a href="/paginas/dicionario/{termo.palavra}">{termo?.palavra}</a></li>
-    
+  
+    function gerarPalavraAleatoria() {
+      const indice = Math.floor(Math.random() * dicionario.length);
+      let palavraAleatoria = dicionario[indice];
+      goto(`/paginas/dicionario/${palavraAleatoria.palavra}`);
+    }
+  </script>
+  
+  <div>
+    <input
+      placeholder="Digite uma palavra" oninput ={buscar} bind:value={palavra}/>
+   
+  </div>
+  <div>
+    {#each letras as letra}
+      <button onclick={() => filtrarPorLetra(letra)}>{letra}</button>
     {/each}
-</ol>
-</div>
+    <button onclick={() => filtrarPorLetra('')}>Todas</button>
+  </div>
+  
+  
+  <div>
+    <button onclick={gerarPalavraAleatoria}>Gerar palavra aleatória</button>
+    <ol>
+      {#each filtradas as termo}
+        <li><a href={`/paginas/dicionario/${termo.palavra}`}>{termo.palavra}</a></li>
+      {/each}
+    </ol>
+  </div>
+  
