@@ -18,7 +18,7 @@
       return false;
     }
 
-    errorMessage = '';
+    errorMessage = ''; 
     return true;
   }
 
