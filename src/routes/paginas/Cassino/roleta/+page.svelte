@@ -57,7 +57,7 @@
           </div>
         {/each}
       </div>
-      <div class="pointer">▼</div>
+      
     </div>
   
     <button onclick={spinWheel} disabled={spinning}>
@@ -67,6 +67,7 @@
     {#if selectedPrize}
       <p class="result">🎉 Você ganhou: <strong>{selectedPrize}</strong>!</p>
     {/if}
+    <br>
     <a href="/paginas/Cassino"><button class ="btn btn-primary">voltar</button></a>
   </main>
   
@@ -117,14 +118,7 @@
       transform: skewY(45deg) rotate(22.5deg);
     }
   
-    .pointer {
-      position: absolute;
-      top: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 2rem;
-      color: red;
-    }
+    
   
     button {
       margin-top: 1rem;
