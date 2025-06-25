@@ -37,6 +37,8 @@
         </div>
       </div>
     {/if}
+
+    <a href="/paginas/Cassino"><button class ="btn btn-primary">voltar</button></a>
   </main>
   
   <style>

@@ -67,6 +67,7 @@
     {#if selectedPrize}
       <p class="result">🎉 Você ganhou: <strong>{selectedPrize}</strong>!</p>
     {/if}
+    <a href="/paginas/Cassino"><button class ="btn btn-primary">voltar</button></a>
   </main>
   
   <style>

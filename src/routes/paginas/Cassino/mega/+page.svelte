@@ -24,4 +24,4 @@ function sortear() {
   <p>Os números sorteados são: {sorteados}</p>
 
 <br>
-<a href="/paginas/Cassino/">Voltar</a>
+<a href="/paginas/Cassino"><button class ="btn btn-primary">voltar</button></a>
