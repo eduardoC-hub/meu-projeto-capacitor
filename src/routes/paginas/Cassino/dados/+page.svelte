@@ -9,7 +9,7 @@
       );
     }
   </script>
-  
+  <a href="/paginas/Cassino"><button class ="btn btn-primary">voltar</button></a>
   <main class="app">
     <h1>🎲 Rolagem de Dados</h1>
   
@@ -39,7 +39,7 @@
     {/if}
     <br>
 
-    <a href="/paginas/Cassino"><button class ="btn btn-primary">voltar</button></a>
+    
   </main>
   
   <style>

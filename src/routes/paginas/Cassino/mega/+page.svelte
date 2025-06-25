@@ -13,12 +13,27 @@ function sortear() {
   }
 </script>
 
-
-<p>está com duvida de qual numero apostar? clique no botao abaixo!</p>
-<button onclick={sortear}>Sortear número</button>
-
-{#each sorteados as sorteado}
-  <p>O número sorteado é: {sorteado}</p>
-{/each}
 <br>
-<a href="/paginas/Cassino/">Voltar</a>
+<a href="/paginas/Cassino"><button class ="btn btn-primary">voltar</button></a>
+<br>
+<br>
+<p>está com duvida de qual numero apostar? clique no botao abaixo!</p>
+<div class ="boto">
+
+<button class=" btn btn-dark" onclick={sortear}>Sortear número</button>
+<br>
+{#each sorteados as sorteado}
+
+  <p><b>O número sorteado é: </b> {sorteado}</p>
+{/each}
+
+<br>
+
+
+</div>
+<style>
+  .boto{
+  text-align: center;
+  }
+
+</style>

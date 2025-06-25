@@ -27,7 +27,7 @@
       // Sorteia qual fatia a roleta deve parar
       const prizeIndex = Math.floor(Math.random() * prizes.length);
       const degreesPerPrize = 360 / prizes.length;
-      const stopAngle = prizeIndex * degreesPerPrize + degreesPerPrize / 2;
+      const stopAngle = prizeIndex * degreesPerPrize + degreesPerPrize ;
   
       const totalRotation = extraRotation + (360 - stopAngle);
   
