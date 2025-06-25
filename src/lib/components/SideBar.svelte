@@ -9,7 +9,8 @@
     { label: 'Boletim', href: '/paginas/boletim' },
     { label: 'Quiz', href: '/paginas/quiz' },
     { label: 'Calculadora', href: '/paginas/calculadora' },
-    { label: 'Dicionario', href: '/paginas/dicionario' }
+    { label: 'Dicionario', href: '/paginas/dicionario' },
+    { label: 'Cassino', href: '/paginas/Cassino' }
 
   ];
 
@@ -67,6 +68,7 @@
         <li class="nav-item"><a class="nav-link active" href="/paginas/boletim">Boletim</a></li>
         <li class="nav-item"><a class="nav-link active" href="/paginas/quiz">Quiz</a></li>
         <li class="nav-item"><a class="nav-link active" href="/paginas/dicionario">Dicionário</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/paginas/Cassino">Cassino</a></li>
 
         
         <li class="nav-item dropdown">

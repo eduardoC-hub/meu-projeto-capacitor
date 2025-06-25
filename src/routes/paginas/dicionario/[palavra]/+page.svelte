@@ -12,6 +12,8 @@
     });
   </script>
   
+ <br>
+ <br>
   {#if termoSelecionado}
     <h1>{termoSelecionado.palavra}</h1>
     <ol>
@@ -25,7 +27,10 @@
   <br>
   <a href="/paginas/dicionario" class='botao-link'>Voltar ao dicionário</a>
 
+
   <style>
+      
+    
     .botao-link {
       display: inline-block;
       padding: 10px 20px;
